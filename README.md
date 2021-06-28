@@ -1,6 +1,6 @@
 ## Princess Mortix
 I code for fun.
-##### <i> ✨ change le monde </i>
+##### <i> ✨ L'essentiel est invisible pour les yeux </i>
 <a><img src="https://github-readme-stats.vercel.app/api?username=princessmortix&show_icons=true&theme=material-palenight&count_private=true" alt="github status"/> <br> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=princessmortix&layout=compact&theme=material-palenight"/></a>
 
 ### Languages
