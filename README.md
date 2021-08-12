@@ -14,4 +14,4 @@ I code for fun.
 > Tools only useful for me.  <i> link soon™ </i> 
 
 #### Where to find me?
-[Email](mailto:contact@princessmortix.site) | [Discord](https://discord.gg/hatsui) | <s> Russian forums </s>
+[Email](mailto:contact@princessmortix.site) | [Discord](https://discord.gg/afpgy3b) | <s> Russian forums </s>
