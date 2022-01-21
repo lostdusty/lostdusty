@@ -17,4 +17,5 @@
 > [Random stuff](https://github.com/princessmortix/BirbOS-golang) with Go <br>
 
 ### Wanna say a hi?
-[Email](mailto:hi@princessmortix.link) | [Discord](https://discord.gg/afpgy3b) | [Website](https://princessmortix.link)
+[Email](mailto:hi@princessmortix.link) | [Discord](https://discord.gg/afpgy3b) | [Website](https://princessmortix.link) <br> <br>
+<img src="https://dans-things.com/wp-content/uploads/2018/10/FreeInternetExplorerBadge.gif" alt="Oh no your internet failed to load this badge :("/>  <img src="https://dans-things.com/wp-content/uploads/2018/10/NetscapeNow.gif" alt="Oh no your internet failed to load this badge :("/>
