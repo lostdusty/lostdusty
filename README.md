@@ -7,14 +7,14 @@
 ### I usually code in...
 
 > Go, mostly. <br> <!-- yummy, love when md broke or im too dumb to fix -->
-> I also know a little of Java and JavaScript
+> Sometimes JavaScript.
 
 ### What you can find here?
 > A [Neofetch clone](https://github.com/princessmortix/BirbOS-golang) for Huawei routers <br>
-> [Tools](https://tools.princessmortix.link) only useful for me. <br>
-> A terminal [game](https://auragame.tk) written purely in Go. <i>( not finished yet.) </i> <br>
-> A [bird os](https://github.com/princessmortix/aeros) w/ [@krista](https://github.com/krista-chan) <br>
-> [Random stuff](https://github.com/princessmortix/BirbOS-golang) with Go <br>
+> A [Windows Tweaker](https://tools.princessmortix.link) only useful for me. <br>
+> A [Terminal game](https://auragame.tk) written purely in Go. <i>( not finished yet.) </i> <br>
+> A [Bird OS](https://github.com/princessmortix/aeros) with [@krista](https://github.com/krista-chan) <br>
+> An [Alternative client to my school website](https://github.com/AlternativeOn/AlternativeOn) with Go <br>
 
 ### Wanna say a hi?
 [Email](mailto:hi@princessmortix.link) | [Discord](https://discord.gg/afpgy3b) | [Website](https://princessmortix.link) <br> <br>
