@@ -48,3 +48,11 @@ footer {
 	  text-align: center;
 	  font-size: 15px;
 }
+
+.blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
