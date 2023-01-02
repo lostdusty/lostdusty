@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<title>princessmortix</title>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://princessmortix.link/style.css">
 		<meta charset="UTF-8">
 		<meta name="keywords" content="princessmortix, princess mortix, rebecca, lyrics, letras, tradução">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -13,9 +13,7 @@
 		var str = 'princessmortix';
 		document.title = '';
 		
-		function sleep(ms) {
-		return new Promise(resolve => setTimeout(resolve, ms));
-		}
+		function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
 		
 		async function typewriteTitle() {
 			for (let i = 0; i < str.length; i++) {
@@ -28,31 +26,41 @@
 						document.title = 'princessmortix';
 						await sleep(500);
 					}
-				}
-		}
-		}
+				}}}
+			
 		typewriteTitle();
 		</script>
 		
 	</head>
 	<body id="top">
 		<main>
-			<h1 id=string0><code>mortix's page<blink>_</blink></code> </h1>                
-            <p id=string1>i am princess mortix, i'm also called rebecca. sometimes i code, sometimes im building computers in cardboard boxes</p>
-            <p id=string2>my socials:</p>
-	    -&gt; <a href="https://www.youtube.com/channel/UCh3mcI4j_C4-uqeZ1CsgjsA">youtube</a>
+			<h1 id=string0><code>mortix's page<blink>_</blink></code></h1>                
+            <p id=string1>hello, i am rebecca, the owner of this website. i sometimes code or build <a href="https://cdn.discordapp.com/attachments/997991591350374542/1058175368277807214/IMG_20221229_204208.jpg">computers on cardboard boxes</a> for fun.</p>
+            <p id=string2>follow my socials:</p>
+			<h4>
+			-&gt; <a href="https://www.youtube.com/@princessmortix">youtube</a>
             <br>
             -&gt; <a href="https://github.com/princessmortix">github</a>
             <br>
             -&gt; <a href="https://instagram.com/princessmortix">instagram</a>
-	    <br>
-            -&gt; <a href="https://discord.gg/afpgy3b">discord server</a>
-	    <br>
+			<br>
+            -&gt; <a href="https://discord.gg/afpgy3b">discord</a>
+			<br>
             -&gt; <a href="https://twitter.com/princessmortix">twitter</a>
-            <p id=string3>if you want, you can also <a href="mailto:hi@princessmortix.link">mail me</a> or send friend request on discord: <br><code>Princess Mortix#0001 (325682674482020352)</code></p>
-            <p id=string4>random stuff:</p>
-            -&gt; <a href="https://ayo.so/princessmortix">ayo.so</a>
+            </h4>
+			
+            <p id=string4>what i've done:</p>
+			<h4 id="string6">
+            -&gt; <a href="https://github.com/princessmortix/doprafetch">neofetch clone for huawei routers</a>
             <br>
+			-&gt; <a href="https://github.com/princessmortix/speedyview">edge webview wrapper in golang</a>
+            <br>
+			-&gt; <a href="https://estudos.princessmortix.link">study (notes) website</a>
+            <br>
+			-&gt; <a href="https://github.com/alternativeon/alternativeon">alternative client for my school website</a>
+			<br>
+			</h4>
+			
 			<hr/>
 			<footer class="is-text-center">
 				<p id=string5><a href="#pt" id=translator>português</a> | with a sword she seeks peace & liberty | <a href="#">❤️</a>
@@ -60,12 +68,12 @@
 			<script>
 			document.getElementById("translator").addEventListener("click", translatePage);
 			function translatePage() {
-			document.getElementById("string0").innerHTML = '<code> site da mortix <blink>_</blink></code>';
-			document.getElementById("string1").innerHTML = "eu sou a princessmortix, as vezes me chamam de rebecca. algumas vezes eu programo, outras eu monto computadores em caixas de papelão";
-			document.getElementById("string2").innerHTML = "minhas redes sociais:";
-			document.getElementById("string3").innerHTML = 'se você quiser, você pode me mandar <a href="mailto:oi@princessmortix.link"> um email</a>. ou me adicionar no discord: <br><code>Princess Mortix#1610 (325682674482020352)</code>';
-			document.getElementById("string4").innerHTML = "coisas aleatorias:";
+			document.getElementById("string0").innerHTML = '<code>site da mortix<blink>_</blink></code>';
+			document.getElementById("string1").innerHTML = "oi! eu sou a rebecca. eu gosto de programar, editar videos e as vezes montar computadores em caixa de papelão.";
+			document.getElementById("string2").innerHTML = "você pode me seguir no...";
+			document.getElementById("string4").innerHTML = "algumas coisas que ja fiz:";
 			document.getElementById("string5").innerHTML = '<a href="" id=translator>see in eng</a> | com uma espada ela busca a paz sob a liberdade | <a href="#">💖</a>';
+			document.getElementById("string6").innerHTML = '-&gt; <a href="https://github.com/princessmortix/doprafetch">clone do neofetch para roteadores huawei</a><br> -&gt; <a href="https://github.com/princessmortix/speedyview">um wrapper do edge webview</a><br> -&gt; <a href="https://estudos.princessmortix.link">site de estudos/resumos</a><br> -&gt; <a href="https://github.com/alternativeon/alternativeon">positivo on, porem melhor e funcional</a><br>'
 			}
 			</script>
 		</main>
