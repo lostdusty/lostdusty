@@ -5,6 +5,7 @@ html, body {
 html {
     display: table;
     margin: auto;
+    padding: 0.125rem;
 }
 
 body {
@@ -102,7 +103,7 @@ a:visited {
 }
 
 .rainbow {
-    animation: rainbow 2.5s linear;
+    animation: rainbow 5s linear;
     animation-iteration-count: infinite;
     width: 16px;
     height: 16px;
