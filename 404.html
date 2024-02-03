@@ -1,11 +1,17 @@
+---
+permalink: /404
+layout: none
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>:(</title>
+    <title>:(</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
+
+    <style>
 	@import url('https://fonts.cdnfonts.com/css/perfect-dos-vga-437');
 	
 	body, html {
@@ -68,7 +74,8 @@
     }
 	
 	</style>
-	<script>
+
+    <script>
 		function sleep(ms) {
 		return new Promise(resolve => setTimeout(resolve, ms));
 		}
@@ -85,24 +92,25 @@
 		
 		loopErr();
 	</script>
-	<body onkeyup="home()" onclick="home()">
-	<span class="notfound">NOT FOUND</span>
-    <p id="404">
-    A fatal execption 404 has ocurred at <br/>
-    </p>
-	<script>
-	document.getElementById("404").innerHTML = "A fatal execption 404 has ocurred at " + window.location.pathname + " in " + navigator.platform + ". The current page will be terminated.";
-	</script>
-	<p>
-	*   Press any key to terminate the current page.
-    <br>
-    *   Press CTRL+W to restart your browser. You will lose any unsaved information in all applications.
-    </p>
-    <a href="https://princessmortix.link">Press any key to continue <blink>_</blink></a>
- </body>
- <script>
-	function home() {
-	window.location.href='/';
+    <body onkeyup="home()" onclick="home()">
+      <span class="notfound">NOT FOUND</span>
+      <p id="404">
+        A fatal execption 404 has ocurred at <br />
+      </p>
+      <script>
+	document.getElementById("404").innerHTML = `A fatal execption 404 has ocurred at ${navigator.productSub}:${navigator.platform} The current page will be terminated.`;
+	
+  function home() {
+	history.back();
 	}
-</script>
-</html>
+  </script>
+      <p>
+        * Press any key to terminate the current page.
+        <br>
+        * Press CTRL+W to restart your browser. You will lose any unsaved
+        information in all tabs.
+      </p>
+      <a href="https://princessmortix.link">Press any key to continue
+        <blink>_</blink></a>
+    </body>
+  </html>

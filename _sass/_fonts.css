@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrain+Mono&family=Oxygen+Mono&family=M+PLUS+Code+Latin:wght@300&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5, h6, pre, table, li {
+    font-family: "JetBrains Mono";
+    color: #f5f5f5;
+}
+
+p {
+    font-family: "Oxygen Mono";
+    font-size: 1rem;
+    color: #dadada;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1.05rem;
+}
+
+time, .post-time {
+    font-family: "M PLUS Code Latin", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #858585;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+a, a:any-link {
+    color: #9e9eff;
+}
+
+hr {
+    color: #464646;
+}
+
+table, td, th {
+    border-collapse: collapse;
+    border: #858585 1px solid;
+    height: 2.25em;
+    
+}
+
+table {
+    width: 80%;
+    overflow-x: auto;
+}
+
+th {
+    font-size: calc(15% + 1rem);
+    background-color: #34dbc5;
+}
