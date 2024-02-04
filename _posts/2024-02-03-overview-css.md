@@ -52,7 +52,7 @@ Mauris viverra dictum ultricies. Vestibulum quis ipsum euismod, facilisis metus 
 
 Now some code:
 
-```
+```js
 const ultimateTruth = 'follow middlepath';
 console.log(ultimateTruth);
 ```

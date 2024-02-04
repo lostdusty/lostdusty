@@ -7,9 +7,18 @@ layout: base
         <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
         <p class="post-meta">
             {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <i data-feather="calendar"></i>
             <time class="post-time" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
               {{ page.date | date: date_format }}
-            </time>
+            </time>| <i data-feather="clock" class="less"></i>
+            {% capture words %}
+            {{ content | number_of_words | minus: 180 }}
+            {% endcapture %}
+            {% unless words contains '-' %}
+            {{ words | strip | prepend: '(' | append: ' palavras, ' }}
+            {{ words | plus: 180 | divided_by: 180 | append: ' minutos)' }}
+            {% endunless %}
+            </p>
     </header>
 
     <div class="post-content" itemprop="articleBody">
