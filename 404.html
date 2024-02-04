@@ -25,7 +25,7 @@ layout: none
 	background: #0000aa;
         color: #ffffff;
         font-family: "Perfect DOS VGA 437 Win", monospace;
-        font-size: 12pt;
+        font-size: 16pt;
         text-align: center;
         margin: 100px;
         margin-top: 14%;
@@ -84,7 +84,7 @@ layout: none
 					for (let z = 0; z < Infinity; z++) {
 						document.title = 'ERROR';
 						await sleep(500);
-						document.title = 'ERROR _';
+						document.title = 'ERROR_';
 						await sleep(500);
 					}
 				
@@ -92,23 +92,25 @@ layout: none
 		
 		loopErr();
 	</script>
-    <body onkeyup="home()" onclick="home()">
-      <span class="notfound">NOT FOUND</span>
+    <body onkeydown="home()" onclick="home()" >
+      <span class="notfound">NOT FOUND!</span>
       <p id="404">
-        A fatal execption 404 has ocurred at <br />
+        A fatal 0x404 exception has ocurred at <br />
       </p>
       <script>
-	document.getElementById("404").innerHTML = `A fatal execption 404 has ocurred at ${navigator.productSub}:${navigator.platform} The current page will be terminated.`;
+	document.getElementById("404").innerHTML = `A fatal 0x404 exception has ocurred at ${navigator.productSub}:${navigator.platform}. The current page will be terminated.`;
 	
   function home() {
 	history.back();
 	}
   </script>
       <p>
-        * Press any key to terminate the current page.
+        * Press any key to return to the previous page.
         <br>
-        * Press CTRL+W to restart your browser. You will lose any unsaved
+        * Press CTRL+SHIFT+W to restart your browser. You will lose any unsaved
         information in all tabs.
+        <br>
+        * Press CTRL+W to close the current page. All unsaved data will be lost.
       </p>
       <a href="https://princessmortix.link">Press any key to continue
         <blink>_</blink></a>
