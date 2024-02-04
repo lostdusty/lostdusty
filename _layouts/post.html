@@ -15,13 +15,13 @@ layout: base
             {{ content | number_of_words | minus: 180 }}
             {% endcapture %}
             {% unless words contains '-' %}
-            {{ words | strip | prepend: '(' | append: ' palavras, ' }}
-            {{ words | plus: 180 | divided_by: 180 | append: ' minutos)' }}
+            {{ words | strip | prepend: '(' | append: ' words, ' }}
+            {{ words | plus: 180 | divided_by: 180 | append: ' minutes)' }}
             {% endunless %}
             </p>
     </header>
 
-    <div class="post-content" itemprop="articleBody">
+    <div class="post-content center" itemprop="articleBody">
         {{ content }}
     </div>
 </article>
