@@ -8,13 +8,22 @@
 }
 
 
+
 h1,
 h2,
 h3,
 h4,
-h5, h6, table, li {
+h5, h6, table {
     font-family: "Geist Mono";
     color: #f5f5f5;
+}
+
+li {
+    font-family: "Geist Mono";
+    color: #f5f5f5;
+    a, a:visited, a:link {
+        color: #2BFC9F;
+    }
 }
 
 p {
@@ -22,7 +31,10 @@ p {
     font-size: 1rem;
     color: #dadada;
     strong, i {
-        color: #fff;
+        color: #2BFC9F;
+    }
+    a, a:visited, a:link {
+        color: #2BFC9F;
     }
 }
 
