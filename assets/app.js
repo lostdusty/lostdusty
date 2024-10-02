@@ -89,8 +89,5 @@ document.onkeydown = function (e) {
 
 window.addEventListener('DOMContentLoaded', function () {
   start();
-  var b = eid("footer").clientHeight;
-  
-  console.log(b);
 })
 
