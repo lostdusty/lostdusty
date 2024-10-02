@@ -1,0 +1,137 @@
+@import url('https://fonts.cdnfonts.com/css/perfect-dos-vga-437');
+
+* {
+    font-family: 'Perfect DOS VGA 437 Win', 'Courier New', Courier, monospace;
+    user-select: none;
+}
+
+:root {
+    --bg: #010197;
+    --bg-txt: #0003a3;
+    --bg-alt: #0000f5;
+    --fg: #aaa;
+    --sel: #fff;
+    --info: #000;
+    --dis: #34323b;
+}
+
+body {
+    margin: 0px;
+    background-color: var(--fg);
+    size: 100%;
+    height: 100%;
+}
+
+
+
+.header {
+    overflow: hidden;
+    padding: 2px 2px;
+    background-image: linear-gradient(90deg, #000004, #0000f5, #000004);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: slide 6s infinite linear;
+
+    p {
+        text-align: center;
+        color: #fff;
+        font-size: 1.25rem;
+        margin: 0;
+    }
+}
+
+@keyframes slide {
+    from {
+        background-position: 200% 0;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--bg-alt);
+    color: var(--sel);
+    text-align: center;
+    height: 3em;
+}
+
+nav {
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 2em;
+    overflow: hidden;
+    background-color: var(--bg-alt);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: var(--fg);
+    text-align: center;
+    padding: 2px 16px;
+    text-decoration: none;
+    border: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a.active {
+    background-color: var(--fg);
+    color: var(--bg);
+}
+
+}
+
+.main-content {
+    display: block;
+    height: calc(100vh - 7.75em); /* Full viewport height minus the header and footer height */
+    padding: 0 10px;
+    box-sizing: border-box;
+    
+    p {
+        padding-left: 10px;
+        margin: 8px;
+        color: var(--bg);
+        .disabled {
+            color: var(--dis);
+        }
+        
+    }
+    #h1 {
+        font-size: 1.3rem;
+        margin-bottom: 4px;
+    }
+    .selected {
+        color: var(--sel);
+    }
+    .no {
+        color: var(--bg-alt);
+        text-decoration: none;
+        border: none;
+    }
+    a.visited {
+        color: var(--bg-alt);
+    }
+    
+    li {
+        color: var(--bg-alt);
+    }
+}
+
+.border {
+    padding: 4px;
+    border: 2px solid var(--bg);
+    height: 100%;
+    box-sizing: border-box;
+    
+}
+
