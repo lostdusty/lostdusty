@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>weather.exe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="https://unpkg.com/xp.css"
+    />
+    <style>
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      .separator {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #000;
+        width: 100%;
+      }
+
+      .icon-search {
+        background: url("assets/icons/search.svg") no-repeat;
+        height: 20px;
+        width: 20px;
+        display: block;
+        margin: 0 auto;
+      }
+      .icon-error {
+        background: url("assets/icons/error.svg") no-repeat center center;
+        height: 32px;
+        width: 32px;
+        display: block;
+        margin: 10 10px;
+      }
+
+      .strong {
+        font-weight: bold;
+      }
+
+      p,
+      label {
+        font-family: "Tahoma";
+      }
+
+      .bigger {
+        font-size: 14px;
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .modal-content {
+        margin: 15% auto;
+        border: 1px solid #888;
+        width: 20%;
+      }
+
+      .dialog-error {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+        p {
+          font-size: 14px;
+          margin-left: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">Weather app</div>
+        <div class="title-bar-controls">
+          <button
+            aria-label="Close"
+            onclick="window.location.replace('/')"
+          ></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div>
+          <p>Welcome to your weather app</p>
+          <p>Enter your city to get started!</p>
+          <div class="field-row">
+            <p for="search-city" class="bigger">Enter your city:</p>
+            <input id="search-city" type="text" />
+            <button id="search-button"><i class="icon-search"></i></button>
+          </div>
+        </div>
+        <div class="separator"></div>
+        <div class="weather-info" hidden>
+          <p class="strong">Now in <span id="today-city"></span></p>
+          <p>Temperature: <span id="today-temp"></span></p>
+          <p>Weather: <span id="today-weather"></span></p>
+          <p>Wind: <span id="today-wind"></span></p>
+        </div>
+      </div>
+      <div class="status-bar">
+        <p id="status-text" class="status-bar-field">Loading page...</p>
+        <p class="status-bar-field"><progress value="0.5"></progress></p>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="window">
+          <div class="title-bar">
+            <div class="title-bar-text">Error</div>
+            <div class="title-bar-controls">
+              <button
+                aria-label="Close"
+                onclick="document.getElementById('myModal').style.display = 'none';"
+              ></button>
+            </div>
+          </div>
+          <div class="window-body">
+            <div class="dialog-error">
+              <i class="icon-error"></i>
+              <p id="error-text"></p>
+              
+          </div>
+          <div class="center">
+          <button
+                onclick="document.getElementById('myModal').style.display = 'none';"
+              >Close</button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function showError(msg) {
+        const errorText = document.getElementById("error-text");
+        errorText.innerText = msg;
+        const modal = document.getElementById("myModal");
+        modal.style.display = "block";
+      }
+
+      window.onload = function () {
+        const searchButton = document.getElementById("search-button");
+        const searchCity = document.getElementById("search-city");
+        const weatherInfo = document.querySelector(".weather-info");
+        const todayCity = document.getElementById("today-city");
+        const todayTemp = document.getElementById("today-temp");
+        const todayWeather = document.getElementById("today-weather");
+        const todayWind = document.getElementById("today-wind");
+        const statusText = document.getElementById("status-text");
+        const progressBar = document.querySelector("progress");
+
+        progressBar.value = 1;
+        statusText.innerText = "Page loaded. Waiting for user input.";
+
+        searchButton.addEventListener("click", async () => {
+          const cityName = searchCity.value;
+          if (!cityName) {
+            showError("Please enter a city name.");
+            return;
+          }
+
+          statusText.innerText = "Loading weather...";
+          progressBar.value = 0.5;
+
+          const response = await fetch(
+            `https://wttr.in/${cityName}?format=%t+%C+%w+%W`
+          );
+          const data = await response.text();
+
+          if (response.status !== 200) {
+            showError("Error loading weather data.");
+            return;
+          }
+
+          const [temp, weather, wind, city] = data.split(" ");
+          todayCity.innerText = cityName;
+          todayTemp.innerText = temp;
+          todayWeather.innerText = weather;
+          todayWind.innerText = wind;
+
+          weatherInfo.hidden = false;
+          statusText.innerText = "Weather loaded.";
+          progressBar.value = 1;
+        });
+      };
+    </script>
+  </body>
+</html>
