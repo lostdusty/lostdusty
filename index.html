@@ -91,11 +91,11 @@
     </script>
     <script>
         window.addEventListener("load", function (event) {
-            var removeRandom = document.querySelector('img[alt="Random"]')
-            removeRandom.remove();
             start();
             setTab(event, "tab-info");
             eid("info").classList.add("active");
+            var removeRandom = document.querySelector('img[alt="Random"]')
+            removeRandom.remove();
         });
     </script>
 
