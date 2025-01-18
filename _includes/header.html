@@ -6,11 +6,11 @@
     {% endcomment %}
 
     <div class="header">
-        <a href="/" class="home glow green">princessmortix.link</a>
+        <a href="/" class="home glow green">lostdusty.dev.br</a>
         <div class="header-right">
             <a href="#" onclick="history.back()"><i data-feather="chevron-left"></i>back</a>
-            <a href="/blog" class="active">blog</a>
-            <a href="/about">about</a>
+            <a href="/blog" {% unless page.url == "/about/" %} class="active" {% endunless %}>blog</a>
+            <a href="/about" {% if page.url == "/about/" %} class="active" {% endif %}>about</a>
         </div>
     </div>
 </header>

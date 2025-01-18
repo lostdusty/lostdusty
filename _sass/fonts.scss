@@ -23,7 +23,10 @@ li {
     color: #f5f5f5;
     a, a:visited, a:link {
         color: #2BFC9F;
+        text-underline-position: under;
+        text-underline-offset: 5%;
     }
+    padding-top: 1em;
 }
 
 p {
@@ -34,8 +37,15 @@ p {
         color: #2BFC9F;
     }
     a, a:visited, a:link {
-        color: #2BFC9F;
+        color: #2BFC9F; 
+        text-underline-position: under;
+        text-underline-offset: 5%;
     }
+    a.footnote, a.reversefootnote {
+        text-underline-offset: 0%;
+        text-underline-position: auto;
+    }
+    
 }
 
 pre {
